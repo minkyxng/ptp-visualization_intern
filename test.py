@@ -57,7 +57,7 @@ def readlog(): # parsing offset
  
 
 schedule.every().day.at('00:00').do(readlog) # run cycle settings
-					     # run a function every midnight
+					                        # run a function every midnight
 #schedule.every(1).minute.do(readlog)
 
 while True:
