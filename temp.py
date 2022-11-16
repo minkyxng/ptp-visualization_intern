@@ -40,7 +40,7 @@ def getContents():
 
 @app.route('/')
 def index():
-    return template(getContents(), '<h2>Welcome</h2>Hellow, WEB')
+    return template(getContents(), '<h2>Welcome</h2>Hello, WEB')
 
 @app.route('/create/', methods=['GET', 'POST'])
 def create():
