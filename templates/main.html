@@ -36,257 +36,29 @@
       </div>
 
       <div id="cont_center">
-        <div id="nodes">
-          <p id="nodeletter">
-            <b>nodelist</b>
-          </p>
-          <div id="shownodes">
-            <div class="nodeframe">
-              <input type="checkbox" value="node0">
-              <p class="node">
-                Node ID 0(Grand Master)
-              </p>
-              <p class="ms">μs</p>
+
+        <form action="/show/" method="post" id="datenode">
+          <div id="nodes">
+            <p id="nodeletter">
+              <b>nodelist</b>
+            </p>
+            <p><input type="date" name="date"></p>
+            <div id="shownodes">
+              {% for list in nodelist%}
+              <div class="nodeframe">
+                <input type="checkbox" name="nodeid" value={{list.nodeId}}>
+                <p class="node" id="{{list.no}}"><a href="/{{list.no}}/" target="_self">{{list.nodeId}}</a></p>
+                <br><br>
+                {% endfor %}
+              </div>
             </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node1">
-              <p class="node">
-                Node ID 1
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node2">
-              <p class="node">
-                Node ID 2
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node4">
-              <p class="node">
-                Node ID 4
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node5">
-              <p class="node">
-                Node ID 5
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node6">
-              <p class="node">
-                Node ID 6
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node7">
-              <p class="node">
-                Node ID 7
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node8">
-              <p class="node">
-                Node ID 8
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node9">
-              <p class="node">
-                Node ID 9
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node10">
-              <p class="node">
-                Node ID 10
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node11">
-              <p class="node">
-                Node ID 11
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node12">
-              <p class="node">
-                Node ID 12
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node13">
-              <p class="node">
-                Node ID 13
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node14">
-              <p class="node">
-                Node ID 14
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node15">
-              <p class="node">
-                Node ID 15
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node16">
-              <p class="node">
-                Node ID 16
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node17">
-              <p class="node">
-                Node ID 17
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node18">
-              <p class="node">
-                Node ID 18
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node19">
-              <p class="node">
-                Node ID 19
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node20">
-              <p class="node">
-                Node ID 20
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node21">
-              <p class="node">
-                Node ID 21
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node22">
-              <p class="node">
-                Node ID 22
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node23">
-              <p class="node">
-                Node ID 23
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node24">
-              <p class="node">
-                Node ID 24
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node25">
-              <p class="node">
-                Node ID 25
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node26">
-              <p class="node">
-                Node ID 26
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node27">
-              <p class="node">
-                Node ID 27
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node28">
-              <p class="node">
-                Node ID 28
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node29">
-              <p class="node">
-                Node ID 29
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <div class="nodeframe">
-              <input type="checkbox" value="node30">
-              <p class="node">
-                Node ID 30
-              </p>
-              <p class="ms">μs</p>
-            </div>
-            <br><br>
-            <!-- </div> -->
+          </div>
+        </form>
+          <div id="showbutton">
+            <button type="submit" id="showchart" form="datenode">show chart</button>
           </div>
 
-          <div id="showbutton">
-            <button type="button" name="showchart" id="showchart">show chart</button>
-          </div>
+
 
           <div id="chart">
             <div id="chartletter">
@@ -295,14 +67,6 @@
             <div id="showmychart">
             </div>
             <script type="text/javascript">
-
-
-
-              var OFFSET =
-                [-5169, 13521, 3433, -1048, -1098, -726, 14940, 543, -5268, -5307, -5185, -2369, -3081, -2627, 1779, 1762, 1773, 1848, 1834, 1801, 1905, 1901, 1844, 1797, 7355, 7348, -7629, 7353, -6203, 6882, 6953, -5639, -2847, 6762, 3909, -6788, 6680, 9199, 2568, 7677, 3977, 4990, 4614, -6749, -13903, 9685, 9532, 9636, 9558, 9545, 6172, 1713, 1706, -1685, -1644, 1214, -1643, -1492, 1644, -1172, -4539, 800, -14638, -1174, -14797, -14661, -6857, -11068, -10303, -794, -5447, 8301, -15308, -37486, -20941, 2210, -1979, -10806, 6901, -907, -10822, 2698, 5848, 6338, 6327, 6352, 6278, 6416, 5527, 6310, 6272,  6267, 6318, 6460, -952, -3417, -4511, -1149, -4773, -2060, -4638, -1186, 1079, 1119, 1156, 1273, 1067, 1107, 1107, -3641, -11700, 3715, 1183, 9531, -2942, 15220, 22413, -909, 1173, -1895, 6439, 6399, 6427, 11521, 8611, 11561, -618, 11560, -2168, -11544, 6212, 11591, 9757, -6685, -6659, -3552, 7, -274, -6662, -6690, -13869, -14384, -17099, -17806, -28236, -32241, 12521, -2839, 7010, -8528, -11105, 18584, 5749, 847, 846, 893, 918, 900, 1099, 944, 1033, -10296, -3847, -10579, -650, -8007, -7965, -7973, 1076, -11296, -4460, -7022, -227, -187, -220, 347, 243, 232, 289, 263, 296, 9149, 0, -2476, -2473, 2507, 2492, -2506, -2477, -2643, 5583, -9407, 1518, 613, -1763, -2638, 16040, 3780, -845, -1905, -22, -897, -802, 802, 765, 876, 804, -696, -930, -630, -5120, -16960, 16742, 16757, 16725, 16722, 16724, -1012, 1140, 1195, 1021, 1161, 440, 16933, 9883, 11446, 16935, 11377, 14623, 13295, 7061, 1731, -1376, -7369, -996, -1163, -1155, -1156, 1159, -1179, 1159, -1194, -1337, -10773, -9683, 1152, -9680, -8031, -6847, 6554, -9714, -7708, -9805, -9139, -12124, -24655, 12591, -6426, -8763, -3213, -16666, 3211, 13157, -2641, 13636, -3824, -5938, -12527, -12537, -5245, -24015, 19474, 19515, 16497, 25729, 2863, 25775, 11102, 9804, 11734, 25791, 8054, 2306, -2737, -10120, 20598, -24355, -25666, -44707, -15299, 13370, -15437, 5607, -11940, 1442, 16357, 16372, -14140, -8428, 625, 6385, -6553, -6510, -6350, 987, -11209, -5436, -8334, -7338, 17511, 5230, 1725, 5227, 2270, 9795, 1786, -16484, -2964, -772, -4732, -97, -3481, 264, 2701, -2883, -1766, -2811, 2812, 2763, 10958, -773, -1825, -679, -16837, -5724, -6979, -9359, -11407, -13174, 11313, 8295, -6573, 3823, -13688, -6907, 2705, -5846, -2543, 27914, 25692, 23810, 28042, 26582, 22701, 18886, 27997, 6263, -535, -10322, -10761, -12101, -10945, -11172, 5130, -7153, -7510, -53, 4150, -1680, -2192, -9459, -12525, -12519, -12593, -12578, -12543, -12681, -2556, -3542, -484, -14530, -9517, 7830, 7890, 7850, 7814, 7812, 7820, 309, -1516, 4629, 4644, -86, -2103, -4519, -3612, 8757, -8662, 7738, 8729, 4040, 6311, 8979, 9778, -9050, -10407, -311, -10096, -2556, 2704, 2566, 2580, 2695, 7405, -10739, -11870, 5364, -11857, -16085, 5364, -11857, -16085, -9684, -652, -628, -572, -565, -577, -533, -595, -640, -615, 616, 99, -8716, 542, 572, 587, 590, 690, 716, 550, 879, -2265]; // 2020-08-12 12:00:16 ~ 2020-08-12 12:07:40
-            //  var OFFSET2 =
-               // [679, 1537, 900, -714, 332, -221, -124, 500, -198, -165, 117, 1116, -549, -370, -295, -6155, 6124, 2113, 361, -550, -832, -1114, 443, -891, 283, 898, -817, -116, 545, 520, -711, 530, -207, 50, 20, 183, -135, -90, 1004, 65, -114, -455, -841, 110, -43, 736, 217, -1104, 214, -764, 128, 415, 1075, -514, -91, -7002, 7231, 2150, -164, -1259, -444, 184, 33, -487, -48, -559, 919, -839, -54, 576, 418, 72, -382, -58, -74, 715, -784, 105, 89, -191, -96, 230, 1013, -1264, 17, 194, -692, 663, -848, 943, -572, -18, 148, -158, 880, -343, -12, -381, 29, 185, -205, 1274, -685, 78, -111, -748, 126, -347, 2, 455, 249, -379, 1272, -575, 107, -556, -113, -327, 385, 346, -291, -1, 1264, -38, -992, -288, 163, -309, 735, -521, -28, 257, 361, -252, 136, 450, -812, 303, 12, -165, 25, 145, 316, -510, 21, -84, 278, 189, 347, -970, 130, 604, -839, 192, -86, 618, -860, 56, 278, 1277, -848, -477, -242, 1005, -655, 197, -464, 293, -335, 1158, -855, 600, -417, 344, -226, 36, 185, -362, 84, 593, -667, -523, 313, -219, 867, -377, -195, 336, 60, 535, 17, -625, -537, 559, -808, 286, -2, 1115, -732, 105, -488, 35, -495, 609, 880, -52, -440, 580, -626, 300, 474, -978, 697, -56, -837, -74, 513, 62, 54, -399, -217, 1129, -291, -361, -92, -176, -6, -274, 185, 780, 298, -1052, -218, 396, 1016, -523, -606, -147, 1062, -873, 185, 827, -711, 489, -1234, 382, -486, 118, 160, 339, 765, -20, -522, 198, -125, -502, 170, 307, -542, 266, 658, -118, -1123, 969, 159, -297, - 315, -88, 1353, -445, -787, 467, -668, 292, -478, -174, 1093, -240, -148, -923, 632, -10, -242, 401, 374, -28, 155, 118, -124, -416, 277, 88, 962, -504, -1029, -140, 441, 544, -149, -550, -24, -137, 680, -116, -562, 463, -169, -502, -527, 1445, -438, 97, -168, 233, 192, 35, 203, 346, -518, 23, 279, -43, -167, -1170, 355, -6570, 6916, 2262, 44, -901, 124, -901, -474, 6, -421, -226, 1190, 153, -527, -577, -201, 193, 130, 169, -311, 971, -336, -535, -6209, 6736, 1246, -126, -440, -933, -480, 511, -630, 296, 57, -159, 782, -670, -139, 874, 129, -642, -37, -87, -83, 590, -457, -115, 458, -226, -827, 220, 56, -116, 1061, -43, -761, 1013, -927, 657, -411, -20, -422, 476, 50, 187, 126, 118, 363, -157, 12, -259, -6826, 6715, 1826, -175, -938, -154, -655, 76, 467, -699, 341, -221, -363, -302, 586, -269, 215, 125, 604, 437, -1294, 306, -167, 328, -329, -228, 477, 233, -715, 659, -496, 166, -280, 1330, -118, -465, -59, -951, 101, 354, -51, 200, -350, 317, 414, -205, //-176, 255, -219, 208, -733, 427, -602, -88, 625, -348, 1026, 52, -1034, 673, -287, -435];
-
               console.time('line');
               Highcharts.chart('showmychart', {
 
@@ -361,9 +125,9 @@
                 },
 
                 series: [{
-                  data: OFFSET,
+                  data: {{offset}},
                   lineWidth: 1,
-                  name: 'node'
+                  name: 'node{{id}}'
                 }]
 
               });
