@@ -40,8 +40,8 @@
   position: absolute;
   width: 121px;
   height: 55px;
-  left: 195px;
-  top: 0px;
+  left: 50%;
+  top: 30%;
 
   font-family: 'sans-serif';
   font-style: bold;
@@ -57,8 +57,8 @@
   position: absolute;
   width: 700px;
   height: 853px;
-  left: 140%;
-  top: 0%;
+  left: 50%;
+  top: 10%;
 }
 #showmychart{
   /* 차트 나오는 부분 */
@@ -74,8 +74,8 @@
   position: absolute;
   width: 121px;
   height: 55px;
-  left: 330px;
-  top: 5px;
+  left: 50%;
+  top: 7px;
 
   font-family: 'sans-serif';
   font-style: bold;
@@ -207,8 +207,8 @@
 
 #showbutton {
   position: absolute;
-  left: 92px;
-  top: 73%;
+  left: 20%;
+  top: 60%;
 }
 
 #showchart:hover {

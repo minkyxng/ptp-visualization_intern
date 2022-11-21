@@ -1,27 +1,20 @@
-// import fs from "fs";
-// document.getElementById('logo').onclick = function(){
-//   var fs = require('fs');
-//   fs.readFile('log/ptplog_slave.txt', function(err, data){
-//     if(err) throw err;
-//     var array = data.toString().split('\n');
-//     for(i in array){
-//       console.log(array[i]);
-//     }
-//   })
-// }
-
-function logoclick(){
-  // console.log('hi');
-    var fs = require('fs');
-    var path = '/Users/minkyxng/Documents/GitHub/ptp-visualization/js/log/ptplog_slave';
-    fs.readFile(path, 'utf8', function(err, data){
-    if(err) throw err;
-  //   // var array = data.toString().split('\n');
-  //   // for(i in array){
-    //   console.log(array[i]);
-    console.log(data);
-    // }
-  })
+window.onload=function(){
+    var today = new Date();
+    var yesterday = new Date(today.setDate(today.getDate()-1)).toISOString().substring(0, 10)
+    document.getElementById('date').setAttribute('max',yesterday);
+//    document.getElementById('date').value = new Date(today.setDate(today.getDate()-1)).toISOString().substring(0, 10);
+//    document.getElementById('node1').setAttribute('checked',true);
 }
 
-$
+
+function checkOnlyOne(element){
+    const checkboxes = document.getElementsByName("nodeid");
+
+    checkboxes.forEach((cb) =>{
+        cb.checked = false;
+        })
+
+        element.checked = true;
+    }
+
+
