@@ -32,11 +32,11 @@
         </div> <!-- div cont_left-->
 
         <div id="cont_center">
-          <form  action="/show/" method="post" id="datenode">
+          <form  action="/show/" method="post" id="datenode"> <!--노드 정보와 날짜 정보를 form으로 보냄-->
             <div id="nodes">
-              <p><input type="date" name="date" id="date"></p>
+              <p><input type="date" name="date" id="date"></p> <!--날짜-->
               <div id="shownodes">
-                {% for list in nodelist%}
+                {% for list in nodelist%} <!--노드 리스트업-->
                 <div class="nodeframe">
                     <input type="checkbox" name="nodeid" id="{{list.nodeId}}" value={{list.no}} onclick="checkOnlyOne(this)">
                     <label for="{{list.nodeId}}">
@@ -46,13 +46,13 @@
                 </div><!--div nodeframe-->
                 {% endfor %}
               </div><!--div shownodes-->
-              <div id="showbutton">
+              <div id="showbutton"> <!--button을 누르면 /show/호출 -> /id/호출-->
                 <button type="submit" id="showchart" form="datenode">show chart</button>
               </div> <!--div showbutton-->
             </div> <!-- div nodes-->
           </form>
 
-          <div id="chart">
+          <div id="chart"> <!--chart 영역-->
             <div id="chartletter">
               <b>chart</b>
             </div> <!-- div chartletter-->
@@ -60,12 +60,17 @@
             </div><!-- div showmychart-->
 
             <script type="text/javascript">
+              //setting date and checkbox
               document.getElementById('date').value = '{{gdate}}';
               document.getElementById('node{{id}}').setAttribute('checked',true);
+
+              //set x축
               x_datetime = [0];
               {% for list in datetime %}
               x_datetime.push('{{list}}');
               {% endfor %}
+
+              //graph속성
 
               console.time('line');
               Highcharts.chart('showmychart', {
